@@ -2,7 +2,20 @@
 <img align="center" src="/images/Logo.png/">
 </p>
 
-#### A app to answer someone's question
+## :question: About the project
+The app made in the sixth edition of Next-Level-Week, offered by rocketseat, aims to facilitate people that want to answer various questions
+
+## :rocket: Technologies 
+
+### FrontEnd/Web:
+  - Typescript
+  - ReactJS
+  - React-router-dom
+  - Styled-components
+  - React-Switch
+  - Leaflet
+  - Mapbox API
+  - Polished
 
 <br />
 
