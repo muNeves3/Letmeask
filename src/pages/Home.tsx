@@ -1,6 +1,7 @@
 import illustrationImg from '../assets/images/illustration.svg';
 import logoImg from '../assets/images/logo.svg';
 import googleIconImg from '../assets/images/google-icon.svg';
+import toast, { Toaster } from 'react-hot-toast';
 
 import '../styles/auth.scss'
 import { Button } from '../components/Button';
@@ -36,6 +37,11 @@ export function Home() {
             return;
         }
 
+        if(roomRef.val().endedAt) {
+            toast.error('Room already closed');
+            return
+        }
+
         history.push(`/rooms/${roomCode}`);
     }
 
@@ -63,6 +69,7 @@ export function Home() {
                         <Button type="submit">
                             Entrar na sala
                         </Button>
+                        <Toaster />
                     </form>
                 </div>
             </main>

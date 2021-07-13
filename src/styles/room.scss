@@ -9,9 +9,19 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            padding: 15px;
+
 
             > img {
                 max-height: 45px;
+            }
+
+            > div {
+                display: flex;
+                gap: 16px;
+                button {
+                    height: 40px;
+                }
             }
         }
     }
@@ -95,5 +105,9 @@
                 }
             }
         }
+    }
+
+    .questionList {
+        margin-top: 32px;
     }
 }
