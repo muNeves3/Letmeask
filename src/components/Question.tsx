@@ -8,13 +8,13 @@ interface IQuestionProps {
         name: string;
     }
     children?: ReactNode;
-    // isHighlighted: boolean;
-    // isAnswered: boolean;
+    isHighlighted: boolean;
+    isAnswered: boolean;
 }
 
-export function Question({content, author, children}: IQuestionProps) {
+export function Question({content, author, isAnswered = false, isHighlighted = false, children}: IQuestionProps) {
     return(
-        <div className="question">
+        <div className={`question ${isAnswered ? 'answered' : ''} ${isHighlighted && !isAnswered ? 'highlighted' : ''}`}>
             <p>{content}</p>
 
             <footer>
